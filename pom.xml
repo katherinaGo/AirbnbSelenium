@@ -31,7 +31,6 @@
                         -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/1.9.5/aspectjweaver-1.9.5.jar
                     </argLine>
                     <useSystemClassLoader>false</useSystemClassLoader>
-                    <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
                 <dependencies>
                     <dependency>
