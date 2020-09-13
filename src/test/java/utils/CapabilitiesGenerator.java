@@ -7,8 +7,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
  * need for some browsers start
  */
 public class CapabilitiesGenerator {
-
     public static ChromeOptions getChromeOptions() {
+
         ChromeOptions options = new ChromeOptions();
         String driverPath = "src/test/resources/webdrivers";
         String os = System.getProperty("os.name").toLowerCase();
@@ -16,7 +16,7 @@ public class CapabilitiesGenerator {
         if (os.contains("win")) {
             System.setProperty("webdriver.chrome.driver", driverPath + "/chromedriver.exe");
         } else if (os.contains("mac")) {
-            System.setProperty("webdriver.chrome.driver", driverPath + "/chromedriver");
+            System.setProperty("webdriver.chrome.driver", driverPath + "/webdrivers/chromedriver");
         } else {
             System.setProperty("webdriver.chrome.driver", driverPath + "/linux/chromedriver");
         }
