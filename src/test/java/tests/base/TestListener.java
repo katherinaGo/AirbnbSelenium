@@ -7,7 +7,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.annotations.Listeners;
 
 import java.util.concurrent.TimeUnit;
 
@@ -36,6 +35,18 @@ public class TestListener implements ITestListener {
         System.out.println(String.format("============================ SKIPPED TEST %s ============================", result.getName()));
     }
 
+    @Override
+    public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
+    }
+
+    @Override
+    public void onStart(ITestContext iTestContext) {
+    }
+
+    @Override
+    public void onFinish(ITestContext iTestContext) {
+    }
+
     @Attachment(value = "screenshot", type = "image/png")
     public static byte[] takeScreenshot(ITestResult result) {
         ITestContext context = result.getTestContext();
@@ -47,6 +58,6 @@ public class TestListener implements ITestListener {
     }
 
     private long getExecutionTime(ITestResult result) {
-        return TimeUnit.MILLISECONDS.toSeconds(result.getEndMillis() -result.getStartMillis());
+        return TimeUnit.MILLISECONDS.toSeconds(result.getEndMillis() - result.getStartMillis());
     }
 }
