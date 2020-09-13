@@ -11,7 +11,7 @@ import utils.CapabilitiesGenerator;
 
 import java.util.concurrent.TimeUnit;
 
-@Listeners(TestListener.class)
+//@Listeners(TestListener.class)
 public class BaseTest {
 
     protected static WebDriver driver;
@@ -21,7 +21,7 @@ public class BaseTest {
     @BeforeMethod
     public void SetUp() {
         driver = new ChromeDriver(CapabilitiesGenerator.getChromeOptions());
-//        System.setProperty("webdriver.gecko.driver", "src/test/resources/geckodriver");
+//        System.setProperty("webdriver.gecko.driver", "src/test/resources/webdrivers/geckodriver");
 //        FirefoxProfile profile = new FirefoxProfile();
 //        profile.setPreference("intl.accept_languages", "en-USA");
 //        FirefoxOptions options = new FirefoxOptions();

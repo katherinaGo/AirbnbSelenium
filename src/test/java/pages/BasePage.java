@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class BasePage {
+
     protected WebDriver driver;
     protected WebDriverWait wait;
 
@@ -32,14 +33,6 @@ public class BasePage {
         }
     }
 
-    public void waitForNumberOfElementToBeByID_NAME_Css(By locator, int amountOfElements) {
-        try {
-            wait.until(ExpectedConditions.numberOfElementsToBe(locator, amountOfElements));
-        } catch (TimeoutException ex) {
-            ex.printStackTrace();
-            Assert.fail("Number of element is not correct");
-        }
-    }
 
     public void waitForNumberOfElementToBeByXpath(String locator, int amountOfElements) {
         try {
