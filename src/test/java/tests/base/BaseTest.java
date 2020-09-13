@@ -11,7 +11,7 @@ import utils.CapabilitiesGenerator;
 
 import java.util.concurrent.TimeUnit;
 
-//@Listeners(TestListener.class)
+@Listeners(TestListener.class)
 public class BaseTest {
 
     protected static WebDriver driver;
