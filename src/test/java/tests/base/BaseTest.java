@@ -33,8 +33,8 @@ public class BaseTest {
 //        options.setProfile(profile);
 //        driver = new FirefoxDriver(options);
 
-        driver.manage().window().fullscreen();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         loginPage = new LoginPage(driver);
         profilePage = new ProfilePage(driver);
     }

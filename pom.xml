@@ -26,7 +26,7 @@
                     <forkCount>2</forkCount>
                     <reuseForks>true</reuseForks>
                     <argLine>
-                        -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/1.9.5/aspectjweaver-1.9.5.jar
+                        -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/1.9.5/aspectjweaver-1.9.5.jar -Xmx256m
                     </argLine>
                     <useSystemClassLoader>false</useSystemClassLoader>
                 </configuration>
