@@ -2,6 +2,8 @@ package tests.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -19,14 +21,18 @@ public class BaseTest {
     protected ProfilePage profilePage;
 
     @BeforeMethod
-    public void SetUp() {
+    public void setUp() {
         driver = new ChromeDriver(CapabilitiesGenerator.getChromeOptions());
-//        System.setProperty("webdriver.gecko.driver", "src/test/resources/webdrivers/geckodriver");
+//        System.setProperty("webdriver.chrome.driver", "src/test/resources/webdrivers/chromedriver");
+//        driver = new ChromeDriver();
+
+
 //        FirefoxProfile profile = new FirefoxProfile();
 //        profile.setPreference("intl.accept_languages", "en-USA");
 //        FirefoxOptions options = new FirefoxOptions();
 //        options.setProfile(profile);
 //        driver = new FirefoxDriver(options);
+
         driver.manage().window().fullscreen();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         loginPage = new LoginPage(driver);
