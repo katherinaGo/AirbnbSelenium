@@ -1,7 +1,9 @@
 package tests;
 
+import io.qameta.allure.Description;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import tests.base.BaseTest;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -17,6 +19,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
+    @Description("Login with valid credentials")
     public void loginWithValidDataTest() {
         loginPage.openPage();
         loginPage.loginWithValidData(EMAIL_VALUE, PASSWORD_VALUE);
